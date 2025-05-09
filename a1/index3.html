@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header
+        {
+            font-size: 30px;
+            color: red;
+            padding: 5px;
+        }
+        #second
+        {
+            background-color: green;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 4</h1>
+    <h3 id="header">Facebook Login Page</h3>
+    <form action="file.jsp" method="post">
+        <!-- <fieldset>
+            <legend>Gender : </legend>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+        </fieldset> -->
+        First Name:  <input type="text" placeholder="Enter First name" required><br><br>
+        Last Name:   <input type="text" placeholder="Enter last name" required><br><br>
+        Mobile or Email:  <input type="email" placeholder="Mobile number or email" required><br><br>
+        Password:  <input type="password" placeholder="New password" required><br><br>
+        <label for="dob">Date Of Birth</label><br>
+        <select>
+        <option>Day</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        </select>
+        <select>
+        <option>Month</option>
+        <option>Jan</option>
+        <option>Feb</option>
+        <option>Wed</option>
+        </select>
+        <select>
+        <option>Year</option>
+        <option>2005</option>
+        <option>2006</option>
+        <option>2007</option>
+        </select><br><br>
+        <label for="">Gender</label><br>
+        <div class="gender">
+        <label><input type="radio" name="gender"> Female</label>
+        <label><input type="radio" name="gender"> Male</label>
+        <label><input type="radio" name="gender"> Custom</label><br><br>
+        <button type="submit" id="second">Sign Up</button>
+      </div>
+    </form>
+</body>
+</html>
