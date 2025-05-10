@@ -73,7 +73,7 @@ button
     border-radius: 4px;
     width: 100px;
 }
-#home 
+#home
 {
     background: linear-gradient(to right, #e3f2fd, #ffffff);
     padding: 40px 0;
@@ -94,9 +94,9 @@ button
     padding: 30px;
     flex-wrap: wrap;
 }
-.boxfirst 
+.boxfirst
 {
-    width: 32%;
+    width: 27%;
     background-color: #ffffff;
     padding: 30px;
     margin: 20px 0;
@@ -107,14 +107,14 @@ button
 {
     transform: translateY(-5px);
 }
-.proj 
+.proj
 {
     text-align: center;
     font-size: 32px;
     margin-top: 30px;
     color: #4a148c;
 }
-#sect 
+#sect
 {
     background-color: #f3e5f5;
 }
