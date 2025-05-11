@@ -17,6 +17,8 @@ header {
     align-items: center;
     background-color: blue;
     color: white;
+    position: sticky;
+    top: 0;
     padding: 15px 30px;
 }
 
@@ -114,7 +116,7 @@ button
     margin-top: 30px;
     color: #4a148c;
 }
-#sect
+#projects
 {
     background-color: #f3e5f5;
 }
