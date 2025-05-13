@@ -1,0 +1,22 @@
+        input {
+            padding: 5px;
+            margin: 5px;
+            width: 130px;
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .input-group {
+            margin-right: 20px;
+        }
+
+        #res {
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-width: 150px;
+            margin-top: 5px;
+        }
