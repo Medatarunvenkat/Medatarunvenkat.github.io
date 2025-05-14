@@ -1,0 +1,3 @@
+[submodule "food-mart"]
+	path = food-mart
+	url = https://github.com/Medatarunvenkat/food-mart-main.git
