@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script7.js"></script>
+    <style>
+         input {
+            padding: 5px;
+            margin: 5px;
+            width: 130px;
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .input-group {
+            margin-right: 20px;
+        }
+
+        #res {
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-width: 150px;
+            margin-top: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>ASSIGNMENT-8</h1>
+    <div class="container">
+    <div class="input-group">
+        <input type="text" id="n1" placeholder="Enter the first number :">
+        <input type="text" id="n2" placeholder="Enter the second number :">
+        <button onclick="add()">Submit</button>
+    </div>
+    <div class="result">
+        <div id="res"></div>
+    </div>
+  </div>
+  <script>
+    const add=()=>
+{
+    var n1=document.getElementById('n1').value;
+    var n2=document.getElementById('n2').value;
+    var sum=parseFloat(n1)+parseFloat(n2);
+    var sub=parseFloat(n1)-parseFloat(n2);
+    var mul=parseFloat(n1)*parseFloat(n2);
+     var div=parseFloat(n1)/parseFloat(n2);
+     document.getElementById('res').innerHTML = 
+        "Sum is: " + sum + "<br>" +
+        "Sub is: " + sub + "<br>" +
+        "Mul is: " + mul + "<br>" +
+        "Div is: " + div;
+}
+
+  </script>
+</body>
+</html>
+

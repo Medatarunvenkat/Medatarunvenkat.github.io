@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 50px;
+}
+input
+{
+    padding: 5px;
+    margin: 5px;
+    width: 130px;
+}
+button {
+    padding: 10px 20px;
+    margin: 10px;
+}
+#result {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>ASSIGNMENT-7</h1>
+    <input type="text" id="n1" placeholder="Enter the first number :"><br><br>
+    <input type="text" id="n2" placeholder="Enter the second number :"><br><br>
+    <button onclick="add()">Submit</button>
+    <div id="res"></div>
+    <script>
+        const add=()=>
+{
+    var n1=document.getElementById('n1').value;
+    var n2=document.getElementById('n2').value;
+    var sum=parseFloat(n1)+parseFloat(n2);
+    var sub=parseFloat(n1)-parseFloat(n2);
+    var mul=parseFloat(n1)*parseFloat(n2);
+     var div=parseFloat(n1)/parseFloat(n2);
+     document.getElementById('res').innerHTML = 
+        "Sum is: " + sum + "<br>" +
+        "Sub is: " + sub + "<br>" +
+        "Mul is: " + mul + "<br>" +
+        "Div is: " + div;
+}
+    </script>
+</body>
+</html>
