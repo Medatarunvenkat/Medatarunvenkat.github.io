@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script8.js"></script>
-    <link rel="stylesheet" href="style8.css">
     <title>Document</title>
 </head>
 <body>
-    <h2>Soory, I cant do anything..😂</h2>
+    <h2>ASSIGNMENT-9</h2>
+     <div class="container">
+    <div class="input-group">
+        <input type="text" id="n1" placeholder="Enter the first number :"><br><br>
+        <input type="text" id="n2" placeholder="Enter the second number :"><br><br>
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <button onclick="div()">/</button>
+    </div>
+    <div class="result">
+        <div id="res"></div>
+    </div>
+  </div>
+    <script>
+        const add=()=>{
+            let a=parseFloat(document.getElementById('n1').value);
+            let b=parseFloat(document.getElementById('n2').value);
+            document.getElementById("res").innerHTML="Addition: " +(a+b);
+        }
+        const sub=()=>{
+            let a=parseFloat(document.getElementById('n1').value);
+            let b=parseFloat(document.getElementById('n2').value);
+            document.getElementById("res").innerHTML="Subtraction: " +(a-b);
+        }
+        const mul=()=>{
+            let a=parseFloat(document.getElementById('n1').value);
+            let b=parseFloat(document.getElementById('n2').value);
+            document.getElementById("res").innerHTML="Multiplication: " +(a*b);
+        }
+        const div=()=>{
+            let a=parseFloat(document.getElementById('n1').value);
+            let b=parseFloat(document.getElementById('n2').value);
+            document.getElementById("res").innerHTML="Divivsion: " +(a/b);
+        }
+    </script>
 </body>
 </html>
