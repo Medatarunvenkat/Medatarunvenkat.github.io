@@ -13,3 +13,12 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     .then(data=>{
     console.log(data);
     })
+
+
+    //using map
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(res=>res.json())
+    .then(data=>{
+        const titles=data.map(x=>x.title);
+        console.log(titles);
+    })
