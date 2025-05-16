@@ -11,9 +11,8 @@
 
 //using map
 
-fetch("https://jsonplaceholder.typicode.com/users")
+fetch("https://jsonplaceholder.typicode.com/posts")
     .then(res=>res.json())
     .then(data=>{
-    const names=data.map(user=>user.name);
-    console.log(names);
+    console.log(data);
     })
