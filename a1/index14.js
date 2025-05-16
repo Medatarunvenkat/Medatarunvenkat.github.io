@@ -3,7 +3,7 @@ const prod=[
     {id:2,"name":"prod2",price:200},
     {id:3,"name":"prod3",price:300}
 ]
-prod.forEach((x)=>{
-    x.price+=5;
-    console.log(x.name+" "+x.price);
-});
+const newarray=prod.map(x=>({name:x.name,price:x.price+5}));
+newarray.forEach(x1=>{
+    console.log(x1.name+" "+x1.price);
+})
