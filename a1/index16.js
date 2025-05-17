@@ -17,8 +17,15 @@ const products=[
 ];
 
 const cart={1:7,3:5}
-products.filter(value=>cart[value.id]!==undefined)
-.map(value=>{
-    const qty=cart[value.id];
-    console.log(value.id,value.name,value.price,qty,value.price*qty);
+// products.filter(value=>cart[value.id]!==undefined)
+// .map(value=>{
+//     const qty=cart[value.id];
+//     console.log(value.id,value.name,value.price,qty,value.price*qty);
+// })
+
+//short method
+products.map(product=>{
+    cart[product.id] && (
+        console.log(product.id,product.name,product.price,product.price*cart[product.id])
+    )
 })
