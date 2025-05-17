@@ -15,8 +15,15 @@ function sqr(a)
 }
 async function main()
 {
-    let sum=await add(6,5)
+    try
+    {
+    let sum=await add(4,5)
     let res=sqr(sum)
     console.log(res)
+    }
+    catch(error)
+    {
+        console.log(error);
+    }
 }
 main()
