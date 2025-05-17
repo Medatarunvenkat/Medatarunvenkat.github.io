@@ -7,5 +7,5 @@ const products=[
 //products.foreach((product) => console.log(product.name))
 
 
-const ins = products.map((product)=>({...product,price:product.price+5, status: "completed", total:product.price*product.qty}));
+const ins = products.map((product)=>({...product,price:product.price+5, status: "completed", total:product.price*product.qty})).filter(product=>product.qty>2);
 console.log(ins)
