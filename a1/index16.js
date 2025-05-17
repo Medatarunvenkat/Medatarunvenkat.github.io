@@ -11,13 +11,13 @@
 // console.log(ins)
 
 const products=[
-    { id: 1, name: "product1",price: 34,qty:3},
-    { id : 2, name: "product2", price: 56,qty:5},
-    { id : 3, name: "product2",price: 43,qty:2},
+    { id: 1, name: "product1",price: 34},
+    { id : 2, name: "product2", price: 56},
+    { id : 3, name: "product2",price: 43},
 ];
 
 const cart={1:7,3:5}
 products.map(value=>{
     const qty=cart[value.id];
-    console.log(value.id,value.name,value.price,value.qty,value.price*qty);
+    console.log(value.id,value.name,value.price,value.price*qty);
 })
