@@ -154,14 +154,32 @@ footer {
                 <h2>Product Name is :${pro.name}</h2>
                 <h2>Price is : ${pro.price}</h2>
                 <h2>
-                    Quantity is: <button onclick="(${y})">-</button>
+                    Quantity is: <button onclick="down(${y})">-</button>
                     ${qty}
-                    <button onclick="(${y})">+</button>
+                    <button onclick="up(${y})">+</button>
                 </h2>
             </div>`;
     }
     x+=`<div style="width:100%;margin:10px;font-size:20px;"><b>Total amt is ::$${total}</b></div>`;
     document.getElementById("root").innerHTML = x;
+    }
+
+    function up(id)
+    {
+        cart[id]++;
+        showcart();
+    }
+    function down(id)
+    {
+        if(cart[id]>1)
+        {
+            cart[id]--;
+        }
+        else
+        {
+            delete cart[id];
+        }
+        showcart()
     }
 
     </script>
