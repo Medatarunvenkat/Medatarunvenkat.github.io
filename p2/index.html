@@ -138,21 +138,29 @@ footer {
         {
             cart[id]=1;
         }
-        alert(`Product ${id} : Qty: ${cart[id]}`)
     }
 
     function showcart()
     {
         let x="";
+        let total=0;
         for(let y in cart) {
         let pro=products.find(p=>p.id==y);
+        let qty=cart[y];
+        let price=pro.price*qty;
+        total+=price;
         x+=`<div class="box">
-                <h2>${pro.id}</h2>
-                <h2>${pro.name}</h2>
-                <h2>Price: ${pro.price}</h2>
-                <h2>Qty${cart[y]}</h2>
+                <h2> Id is :${pro.id}</h2>
+                <h2>Product Name is :${pro.name}</h2>
+                <h2>Price is : ${pro.price}</h2>
+                <h2>
+                    Quantity is: <button onclick="(${y})">-</button>
+                    ${qty}
+                    <button onclick="(${y})">+</button>
+                </h2>
             </div>`;
     }
+    x+=`<div style="width:100%;margin:10px;font-size:20px;"><b>Total amt is ::$${total}</b></div>`;
     document.getElementById("root").innerHTML = x;
     }
 
