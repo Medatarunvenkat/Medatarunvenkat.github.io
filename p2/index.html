@@ -14,25 +14,29 @@ body {
     background-color:white;
 }
 header {
-    background-color:black;
+    background-color: black;
     color: white;
     padding: 20px;
-    text-align: center;
-    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #444;
+}
+header h1 {
+    font-size: 28px;
     font-weight: bold;
     letter-spacing: 1px;
-    border-bottom: 3px solid #444;
+    margin-left: 20px;
 }
 header ul {
     display: flex;
-    justify-content: center;
     gap: 30px;
     list-style: none;
-    margin-top: 10px;
+    margin-right: 20px;
 }
 header ul li {
     color: #ccc;
-    font-size: 16px;
+    font-size: 32px;
     cursor: pointer;
     transition: color 0.3s ease;
 }
