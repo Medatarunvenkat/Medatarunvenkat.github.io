@@ -145,12 +145,12 @@ footer {
     {
         let x="";
         for(let y in cart) {
-        let pro=products.find(p=>p.id==id);
+        let pro=products.find(p=>p.id==y);
         x+=`<div class="box">
                 <h2>${pro.id}</h2>
                 <h2>${pro.name}</h2>
                 <h2>Price: ${pro.price}</h2>
-                <h2>Qty${cart[id]}</h2>
+                <h2>Qty${cart[y]}</h2>
             </div>`;
     }
     document.getElementById("root").innerHTML = x;
