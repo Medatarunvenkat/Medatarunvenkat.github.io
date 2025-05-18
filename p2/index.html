@@ -96,8 +96,8 @@ footer {
     <header>
         <h1>My Store</h1>
         <ul>
-            <li>Home</li>
-            <li>Cart</li>
+            <li onclick="showpro()">Home</li>
+            <li onclick="showcart()">Cart</li>
         </ul>
     </header>
     <main>
@@ -125,6 +125,37 @@ footer {
         }
         document.getElementById("root").innerHTML=x;
     }
+
+
+    let cart={}
+    function add(id)
+    {
+        if(cart[id])
+        {
+            cart[id]+=1;
+        }
+        else
+        {
+            cart[id]=1;
+        }
+        alert(`Product ${id} : Qty: ${cart[id]}`)
+    }
+
+    function showcart()
+    {
+        let x="";
+        for(let y in cart) {
+        let pro=products.find(p=>p.id==id);
+        x+=`<div class="box">
+                <h2>${pro.id}</h2>
+                <h2>${pro.name}</h2>
+                <h2>Price: ${pro.price}</h2>
+                <h2>Quantity: ${cart[id]}</h2>
+            </div>`;
+    }
+    document.getElementById("root").innerHTML = x;
+    }
+
     </script>
 </body>
 </html>
