@@ -5,40 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      .box {
-    border: 1px solid #ccc;
-    padding: 8px;
-    width: 100px;
-    background-color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    font-size: 13px;
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
+body {
+    background-color:white;
+}
+header {
+    background-color:black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #444;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 10px;
+}
+header ul li {
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+header ul li:hover {
+    color: white;
+}
 #root {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin: 20px;
-    justify-content: flex-start; /* Align boxes to the left */
+    gap: 20px;
+    margin: 40px;
+    justify-content: flex-start;
 }
-
+.box {
+    border: 1px solid white;
+    padding: 15px;
+    width: 140px;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+.box:hover {
+    transform: scale(1.05);
+}
+.box h2 {
+    font-size: 16px;
+    margin: 8px 0;
+}
 button {
-    margin-top: 5px;
-    padding: 4px 6px;
-    font-size: 12px;
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
     cursor: pointer;
-    border-radius: 3px;
-    border: 1px solid #aaa;
-    background-color: #f2f2f2;
-    transition: background-color 0.2s ease;
+    border-radius: 4px;
+    border: 1px solid gray;
+    background-color: white;
 }
-
 button:hover {
-    background-color: #ddd;
+    background-color: green;
 }
-
+footer {
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border-top: 2px solid #444;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
     </style>
 </head>
 <body onload="showpro()">
