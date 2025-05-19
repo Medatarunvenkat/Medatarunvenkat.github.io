@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Username</h2>
+    <div id="namelist"></div>
+    <h3>Email Submission</h3>
+    <input type="email" id="email" placeholder="Enter Email ID">
+    <button onclick="submit()">Submit</button>
+    <p id="matchname"></p>
+
+        <script>
+        let allUsers=[]
+        async function fetchusers() 
+        {
+            const res = await fetch('https://jsonplaceholder.typicode.com/users');
+            const data = await res.json();
+            allUsers = data;
+            let names = '';
+            for(let i=0; i < data.length; i++) {
+            names += data[i].name + '<br>';
+        }
+        document.getElementById('namelist').innerHTML = names;
+        }
+        function submit() {
+        const emailInput = document.getElementById('email').value.trim().toLowerCase();
+        const user = allUsers.find(u => u.email.toLowerCase() === emailInput);
+    if(user) {
+      document.getElementById('matchname').textContent = "Matched Name: " + user.name;
+    } else {
+      document.getElementById('matchname').textContent = "No matching user found.";
+    }
+  }
+
+  fetchusers();
+        </script>
+</body>
+</html>
