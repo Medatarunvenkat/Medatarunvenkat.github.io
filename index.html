@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -144,5 +144,321 @@ ol:nth-of-type(2) li::before {
         <li><a href="a1/index15.html">Assignment 15</a></li>
         <li><a href="a1/index20.html">Assignment 16</a></li>
     </ol>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meda Tarun Venkat | MERN Stack Developer</title>
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #8338ec;
+            --accent-color: #ff006e;
+            --dark-color: #1a1a2e;
+            --light-color: #ffffff;
+            --background-color: #f8f9fa;
+            --text-color: #333333;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-color);
+            padding: 3rem 2rem;
+            border-radius: 0 0 30px 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-text {
+            flex: 2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        section {
+            background-color: var(--light-color);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 0;
+            display: inline-block;
+        }
+
+        h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .projects-list, .assignments-list {
+            list-style-type: none;
+        }
+
+        .projects-list li, .assignments-list li {
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .projects-list li {
+            background-color: rgba(58, 134, 255, 0.05);
+            padding: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .projects-list li:hover {
+            background-color: rgba(58, 134, 255, 0.1);
+        }
+
+        .assignments-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 1rem;
+        }
+
+        .assignments-list li {
+            margin-bottom: 0;
+            text-align: center;
+            background-color: rgba(131, 56, 236, 0.05);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .assignments-list li:hover {
+            background-color: rgba(131, 56, 236, 0.1);
+            transform: translateY(-3px);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .projects-list a {
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .projects-list a::before {
+            content: '📁';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .assignments-list a {
+            padding: 1rem 0.5rem;
+            font-size: 0.9rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .assignments-list a::before {
+            content: '📝';
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            main {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .assignments-list {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.1rem;
+            }
+            
+            .assignments-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <div class="profile-text">
+                <h1>Meda Tarun Venkat</h1>
+                <h2>MERN Stack Developer</h2>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="projects-section">
+                <h3>My Projects</h3>
+                <ul class="projects-list">
+                    <li><a href="p1/index.html">My Portfolio</a></li>
+                    <li><a href="https://medatarunvenkat.github.io/food-mart">Food-Mart</a></li>
+                    <li><a href="https://medatarunvenkat.github.io/p2/index.html">My Store</a></li>
+                    <li><a href="https://medatarunvenkat.github.io/p3/index.html">Bank ATM</a></li>
+                </ul>
+            </section>
+            
+            <section class="assignments-section">
+                <h3>Assignments</h3>
+                <ul class="assignments-list">
+                    <li><a href="a1">Assignment 1</a></li>
+                    <li><a href="a1/index1.html">Assignment 2</a></li>
+                    <li><a href="a1/index2.html">Assignment 3</a></li>
+                    <li><a href="a1/index3.html">Assignment 4</a></li>
+                    <li><a href="a1/index4.html">Assignment 5</a></li>
+                    <li><a href="a1/index5.html">Assignment 6</a></li>
+                    <li><a href="a1/index6.html">Assignment 7</a></li>
+                    <li><a href="a1/index7.html">Assignment 8</a></li>
+                    <li><a href="a1/index8.html">Assignment 9</a></li>
+                    <li><a href="a1/index10.html">Assignment 10</a></li>
+                    <li><a href="a1/objectsjsindex11.html">Assignment 11</a></li>
+                    <li><a href="a1/index12.html">Assignment 12</a></li>
+                    <li><a href="a1/index13.html">Assignment 13</a></li>
+                    <li><a href="a1/index14.html">Assignment 14</a></li>
+                    <li><a href="a1/index15.html">Assignment 15</a></li>
+                    <li><a href="a1/index20.html">Assignment 16</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2025 Meda Tarun Venkat | MERN Stack Developer
+        </footer>
+    </div>
 </body>
 </html>
